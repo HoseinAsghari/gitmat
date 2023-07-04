@@ -1,6 +1,6 @@
 clc;clear all;
 b=(imread('background.JPG'));% read background image 
-t=(imread('template.JPG'));% read template image
+t=(imread('template.JPG'));% read template image 
 [ir,ic]=size(b);%
 [tr,tc]=size(t);
 t=imcrop(t,[0,0,tr,tr]);% to fix this image to real size we need to omit some trash pixels
