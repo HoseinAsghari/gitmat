@@ -1,8 +1,8 @@
 clc;clear all;
 b=(imread('background.JPG'));% read background image 
 t=(imread('template.JPG'));% read template image 
-[ir,ic]=size(b);%
-[tr,tc]=size(t);
+[ir,ic]=size(b);% get size of background
+[tr,tc]=size(t);%get size of template
 t=imcrop(t,[0,0,tr,tr]);% to fix this image to real size we need to omit some trash pixels
 R=normxcorr2(t(:,:,3),b(:,:,3));% finding normal cross correlation
 R=imcrop(R,[tr,tr,ic,ir]);% crop the extra pixels
