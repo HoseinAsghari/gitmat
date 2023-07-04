@@ -1,5 +1,5 @@
 clc;clear all;
-b=(imread('background.JPG'));% read background image
+b=(imread('background.JPG'));% read background image 
 t=(imread('template.JPG'));% read template image
 [ir,ic]=size(b);%
 [tr,tc]=size(t);
